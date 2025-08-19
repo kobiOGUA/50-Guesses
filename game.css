@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Roboto';
+    color: #89dcff;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-top: -0.1em;
+}
+
+body {
+    background-color: #0158c1;
+    animation: bgChange 1s 0.5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+#gameContent {
+    width: 90%;
+    max-width: 27em;
+    height: auto;
+    min-height: 12em;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    box-shadow: 0 0 8px #2584f8;
+    transition: 0.5s ease;
+    animation: slideUpAnim 1s forwards;
+}
+
+#startSection, #guessSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#guessSection, #status, #guessMessage, #guessCounter, #gameOver, #youMade, #playAgain {
+    display: none;
+}
+
+#status {
+    margin-top: -0.3em;
+    text-align: center;
+}
+
+#guessMessage {
+    margin-top: 1.5em;
+    text-align: center;
+    padding: 0 1em;
+}
+
+#gameOver {
+    margin-top: -0.1em;
+    text-align: center;
+    padding: 0 1em;
+}
+
+input, input::placeholder {
+    width: 100%;
+    max-width: 15em;
+    height: 2.5em;
+    background-color: #74d2fb;
+    border: 0;
+    border-radius: 5px;
+    color: #0051b5;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #74d2fb;
+    border-color: #4cc9ff;
+    border-style: solid;
+    width: 8em;
+    height: 2.5em;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    animation: fadeInSlideUp 2s 3s forwards;
+    color: #0048a1;
+    transition: 0.5s ease;
+    margin-top: 0.8em;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #b1e8ff;
+    color: #0067e6;
+}
+
+#welcomeMessage {
+    display: none;
+    text-align: center;
+    padding: 0 1em;
+}
+
+@keyframes bgChange {
+    0% {background-color: #0158c1;}
+    100% {background-color: #74d2fb;}   
+}
+
+.slideup {
+    transition: 1s ease;
+    transform: translateY(100vh);
+    opacity: 0;
+}
+
+@keyframes slideUpAnim {
+    0% {transform: translateY(100vh); background-color: #89dcff;}
+    100% {transform: translateY(0vh); background-color: #0069e8;}
+}
+
+@media (max-width: 600px) {
+    #gameContent {
+        padding: 1em;
+        min-height: 10em;
+    }
+
+    button {
+        width: 30%;
+        max-width: 12em;
+        font-size: 0.9rem;
+    }
+}

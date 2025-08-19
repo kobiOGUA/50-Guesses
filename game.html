@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobi's Guessing Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="gameContent">
+    <h1 id="title">50 Guesses</h1>
+    
+    <div id="startSection">
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="startButton">Start</button>
+    </div>
+
+    <div id="guessSection">
+    <p id="status"></p>
+    <input type="text" id="guessInput" placeholder="Enter your guess">
+    <button id="guessButton">Guess</button>
+    <p id="guessMessage"></p>
+    <p id="guessCounter"></p>
+    </div>
+
+    <p id="gameOver"></p>
+    <button id="playAgain">Play Again</button>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
